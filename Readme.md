@@ -1,69 +1,47 @@
-# Just clone and run it in your local.
-# Resume Generator
+# Resumerator
 
-## Approach and Solution
+A **web-based Resume Generator** that takes your LinkedIn PDF and automatically generates a professionally formatted HTML resume using AI (OpenAI or Google Gemini).
 
-This project implements a Resume Generator web application using FastAPI. The application allows users to upload a LinkedIn PDF, select an AI API (OpenAI or Gemini), and generate an HTML resume based on the content of the PDF.
+## 🔗 Live Demo
 
-### Key Components
+[resume-website-generator.vercel.app](https://resume-website-generator.vercel.app)
 
-1. FastAPI Web Application:
-   - The main application logic is implemented in `app.py`.
-   - It handles file uploads, API selection, and resume generation.
+## ✨ Features
 
-2. HTML Template:
-   - The upload form is defined in `templates/index.html`.
-   - It provides a user-friendly interface for file upload and API selection.
+- 📎 **LinkedIn PDF Upload** — Upload your LinkedIn profile export PDF
+- 🤖 **AI-Powered Parsing** — Uses OpenAI or Google Gemini to extract and format resume data
+- 📝 **HTML Resume Generation** — Produces a clean, professional HTML resume
+- 🎨 **Template-Based Output** — Consistent styling via pre-defined HTML resume templates
+- ⚙️ **API Selection** — Choose between OpenAI or Gemini for generation
 
-3. Resume Template:
-   - The generated resume uses a pre-defined HTML template (`templates/resume_template.html`).
-   - This template ensures a consistent and professional look for all generated resumes.
+## 🛠️ Tech Stack
 
-### Running the Project Locally
+- **Python** — Core language
+- **FastAPI** — Web application framework
+- **OpenAI API / Google Gemini** — AI resume generation
+- **Jinja2 HTML Templates** — Resume output formatting
+- **Vercel** — Deployment
 
-To run this project on your local machine, follow these steps:
+## 🚀 Getting Started
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/SarthakPaandey/ResumeWebsiteGenerator
-   cd ResumeWebsiteGenerator
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/SarthakPaandey/Resumerator.git
+cd Resumerator
 
-2. Create and activate a virtual environment:
-   ```
-   python -m venv myenv
-   source myenv/bin/activate  # On Windows, use: myenv\Scripts\activate
-   ```
+# Create virtual environment
+python -m venv myenv
+source myenv/bin/activate  # or myenv\Scripts\activate on Windows
 
-3. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-4. Run the FastAPI application:
-   ```
-   uvicorn app:app --reload
-   ```
+# Run the application
+uvicorn app:app --reload
+```
 
-5. Open your web browser and navigate to `http://127.0.0.1:8000` to access the application.
+Open [http://localhost:8000](http://localhost:8000) in your browser.
 
-### Usage
+## 📄 License
 
-1. Upload a LinkedIn PDF file.
-2. Select the AI API you want to use (OpenAI or Gemini).
-3. Enter your API key for the selected service.
-4. Click "Generate Resume" to create your HTML resume.
-
-### Dependencies
-
-The project relies on several Python libraries, which are listed in the `requirements.txt` file.
-
-### Future Improvements
-
-1. Add more AI API options for resume generation.
-2. Implement user authentication and resume storage.
-3. Enhance the resume template with more customization options.
-4. Add support for multiple file formats beyond PDF.
-5. Implement a preview feature before downloading the generated resume.
-
-This implementation provides a solid foundation for a Resume Generator application, with room for expansion and improvement based on user feedback and additional requirements.
+MIT
